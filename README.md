@@ -37,6 +37,9 @@
 ## 資料收集
 如果你的專案需要特定的資料集，這裡可以提供一些關於如何獲取、處理或下載資料的指示。
 * [MoiveLens](https://grouplens.org/datasets/movielens/)
+  
+  ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/1260afb8-58fa-4776-95fc-82a459ae57b5)
+
 
 ## 資料分析流程
 這一部分描述你的資料分析流程，包括你使用的方法、模型或演算法。你可以提供程式碼片段或流程圖來幫助讀者理解你的分析過程。
