@@ -65,12 +65,34 @@
             方向一致夾角度數θ為0，餘弦值為1
             反之向量之間夾角θ越大，表示2個向量的方向差異越大
             當方向相反時餘弦值為-1
+        
+          ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/2eac0c68-ba5b-49af-a895-d84ef047fc0f)
 
-    
 
 ## 結果展示
 展示和解釋你的資料分析結果。可以包括圖表、視覺化效果或統計數據，並提供解釋和洞察。
 
+* Rating 數量分佈
+
+    ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/5e71ab77-07d6-4185-ba78-9a359591ec29)
+
+* 電影類型 數量分佈
+
+    ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/1a8e77c0-a2cc-4579-ac61-ed987aa41688)
+
+* 內容過濾 Content-based filtering (CB)
     ```
-    待補
+    # Test
+    # get_similar_movies_bycontent(data_set, 來源電影編號, 已看過電影編號(內建無), 推薦幾部相似的(內建10))
+    # 電影編號1為 Toy Story (1995)
+    # seen = contentBased_df['movie_id'].values << 全電影都看過
+    
+    wantedTofind = contentBased_df[contentBased_df['movie_id'] == 1]['movie_title'].values[0]
+    seen = [700, 240, 18]
+    print(f'Recommendation for moives silmlar with "{wantedTofind}"')
+    print("You've already watched movies those we don't recommend again!")
+    for i, m in enumerate(seen, 1):
+        print(i, contentBased_df[contentBased_df['movie_id'] == m]['movie_title'].values[0])
+    get_similar_movies_bycontent(contentBased_df, 1, seen, 5)
     ```
+    ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/8ba481ae-e4c8-42f4-9e8b-ec5e134612da)
