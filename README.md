@@ -106,8 +106,8 @@
     # 電影編號1為 Toy Story (1995)
     # seen = contentBased_df['movie_id'].values << 全電影都看過
     
-    wantedTofind = contentBased_df[contentBased_df['movie_id'] == 1]['movie_title'].values[0]
     seen = [700, 240, 18, 2]
     get_similar_movies_bycontent(contentBased_df, 1, seen)
     ```
-    ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/8ba481ae-e4c8-42f4-9e8b-ec5e134612da)
+    ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/2304940c-7519-4435-97f8-76a28c782217)
+
