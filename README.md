@@ -13,8 +13,10 @@
 |檔案、資料夾名稱|用途|備註|
 |:--|:--|:--|
 |README.md|這份專案的簡介、Demo|無|
-|input|電影資料集來源|*from movielens 100k dataset*|
-|RS.ipynb|推薦系統主程式|RS.py為py版本|
+|input|電影資料集來源、經處理後資料檔案|*from movielens 100k dataset* *cleaned_data.csv*|
+|DataProcess.py|原始資料處理||
+|RS_CB.ipynb|基於內容相似度做推薦|.py為py版本|
+|RS_CF.ipynb(待補)|基於協同過濾做推薦|.py為py版本|
 
 ## 安裝與使用方法
 提供安裝和使用你的專案的指示。包括所需的相依套件、如何設置環境、安裝步驟和執行專案的指令。
@@ -40,6 +42,23 @@
   
   ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/1260afb8-58fa-4776-95fc-82a459ae57b5)
 
+* 欄位定義
+
+|No.|名稱|定義|
+|:--|:--|:--|
+|1|user_id|使用者id|
+|2| movie_id | 電影id|
+|3| rating | 評分(1~5)|
+|4| timestamp | UTC of 1/1/1970 後幾秒|
+|5| age | 年紀|
+|6| sex | 性別|
+|7| occupation | 職業|
+|8| zip_code | 郵政編碼|
+|9| movie_title | 電影名稱|
+|10| release_date | 發佈日期|
+|11| video_release_date | 家用媒體市場發佈日期(DVD、非電影院)|
+|12| IMDb_URL | 該電影IMDb網址|
+|13 ~ 31| 電影分類類別|unknown, Action, Adventure, Animation, Children's, Comedy, Crime, Documentary,                      Drama, Fantasy, Film-Noir, Horror, Musical, Mystery, Romance, Sci-Fi, Thriller, War, Western|
 
 ## 資料分析流程
 這一部分描述你的資料分析流程，包括你使用的方法、模型或演算法。你可以提供程式碼片段或流程圖來幫助讀者理解你的分析過程。
@@ -88,11 +107,7 @@
     # seen = contentBased_df['movie_id'].values << 全電影都看過
     
     wantedTofind = contentBased_df[contentBased_df['movie_id'] == 1]['movie_title'].values[0]
-    seen = [700, 240, 18]
-    print(f'Recommendation for moives silmlar with "{wantedTofind}"')
-    print("You've already watched movies those we don't recommend again!")
-    for i, m in enumerate(seen, 1):
-        print(i, contentBased_df[contentBased_df['movie_id'] == m]['movie_title'].values[0])
-    get_similar_movies_bycontent(contentBased_df, 1, seen, 5)
+    seen = [700, 240, 18, 2]
+    get_similar_movies_bycontent(contentBased_df, 1, seen)
     ```
     ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/8ba481ae-e4c8-42f4-9e8b-ec5e134612da)
