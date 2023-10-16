@@ -16,7 +16,7 @@
 |input|電影資料集來源、經處理後資料檔案|*from movielens 100k dataset* *cleaned_data.csv*|
 |DataProcess.py|原始資料處理||
 |RS_CB.ipynb|基於內容相似度做推薦|.py為py版本|
-|RS_CF.ipynb(待補)|基於協同過濾做推薦|.py為py版本|
+|RS_CF_item-based.ipynb|基於協同過濾做推薦(item-based)|.py為py版本|
 
 ## 安裝與使用方法
 提供安裝和使用你的專案的指示。包括所需的相依套件、如何設置環境、安裝步驟和執行專案的指令。
@@ -111,3 +111,11 @@
     ```
     ![image](https://github.com/dscareer-bootcamp/data-analytics-starter-DrDAN6770/assets/118630187/2304940c-7519-4435-97f8-76a28c782217)
 
+* 協同過濾 Collaborative filtering item-based (CB)
+    ```
+    # Test
+    target = "Jerry Maguire (1996)"
+    user = 900
+    get_similar_movies_byCF(cleaned_data, target, user)
+    ```
+    ![image.png](attachment:image.png)
