@@ -118,4 +118,4 @@
     user = 900
     get_similar_movies_byCF(cleaned_data, target, user)
     ```
-    ![image.png](attachment:image.png)
+    ![image](https://github.com/DrDAN6770/Recommender-System/assets/118630187/101b02f5-b80a-4417-a69e-9c3a0057e648)
